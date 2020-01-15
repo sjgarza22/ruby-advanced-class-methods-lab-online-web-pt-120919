@@ -37,6 +37,11 @@ class Song
   
   end
   
+  def self.new_from_filename(filename)
+    filename_array = filename.split(" - ")
+  
+  end
+  
   def self.alphabetical
     self.all.sort_by{|song| song.name}
   
@@ -51,7 +56,7 @@ class Song
   end
   
   def self.destroy_all
-    
+    self.all.clear
   
   end
 
